@@ -1,4 +1,5 @@
 import React from 'react';
+import ImageUpload from './ImageUpload';
 import './ExploreContainer.css';
 
 interface ContainerProps {
@@ -9,7 +10,13 @@ const ExploreContainer: React.FC<ContainerProps> = ({ name }) => {
   return (
     <div className="container">
       <strong>{name}</strong>
-      <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ImageUpload
+        placeHolderImg="assets/no-image.webp"
+        onImageChange={(data: any, pictureURL: any) => {
+          console.log('imageChange', data, pictureURL);
+        }}
+        variant="add"
+      />
     </div>
   );
 };
