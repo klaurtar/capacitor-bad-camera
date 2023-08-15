@@ -1,0 +1,7 @@
+{
+  "name": "bad_camera_android",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
